@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 40vh;
+    background: #eee;
+    position: relative;
+}
+
+header i {
+    font-size: 5rem;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    bottom: -10%;
+    background: linear-gradient(#ff7514, #e4a010);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.1s linear;
+    text-shadow: 0px 10px 10px hsla(41, 87%, 48%, 0.5);
+    -webkit-text-stroke: 3px #fff;
+}
+#timer-con {
+    display: flex;
+    padding: 5% 10%;
+    justify-content: space-between;
+    color: #e4a010;
+}
+#timer-con div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: 0.8rem;
+}
+#timer-con div p:nth-child(2) {
+    font-size: 3rem;
+}
+#start-con,
+#reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#start-con #circle {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e4a010;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+#reset-con {
+    overflow: hidden;
+    position: absolute;
+    left: 52%;
+}
+#reset {
+    width: 100px;
+    height: 50px;
+    border-radius: 0px 100px 100px 0px;
+    color: white;
+    column-gap: 10px;
+    position: relative;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    position: relative;
+    background-color: #e4a010;
+}
+
+.rotate {
+    animation: rotateTimer 2s infinite linear;
+}
+
+@keyframes rotateTimer {
+    from {
+        transform: translate(-50%, 0%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, 0%) rotate(360deg);
+    }
+}
