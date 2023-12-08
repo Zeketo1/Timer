@@ -48,16 +48,17 @@ circle.onclick = () => {
 };
 
 stopIcon.onclick = () => {
-    let seconds = 0;
-    let minutes = 0;
-    let hours = 0;
-    let rotae = 0;
+    seconds = 1;
+    minutes = 0;
+    hours = 0;
+    rotate = 0;
+    timerIcon.style.transition = "none";
     timerIcon.style.transform = `translate(-50%, 0) rotate(${rotate}deg)`;
-    // resetCon.style.transform = "translateX(-20%)";
+    resetCon.style.transform = "translateX(-100%)";
     circle.style.borderRadius = "50%";
-    secText.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
-    minText.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
-    hourText.innerHTML = hours < 10 ? `0${hours}` : hours;
+    secText.innerHTML = "00";
+    minText.innerHTML = "00";
+    hourText.innerHTML = "00";
     circleIcon.classList.replace("fa-pause", "fa-play");
     clearInterval(rotateIntervalId);
     clearInterval(intervalId);
